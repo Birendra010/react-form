@@ -32,7 +32,7 @@ function App() {
       {/* <h1>Regitation Form</h1> */}
       {/* <SchemabasedFrom /> */}
       <div className='mt-4'>
-        <ExpenseForm onSubmit={expense => setExpenses([...expenses, { ...expense, id: expenses.length + 1 }])} />
+        <ExpenseForm onSubmit={expense => setExpenses([...expenses, { ...expense, id:Math.random() }])} />
       </div>
       <div className='mt-5'>
         <ExpenseFilter onSelectCategory={(category) => setSelectedCategory(category)} />
