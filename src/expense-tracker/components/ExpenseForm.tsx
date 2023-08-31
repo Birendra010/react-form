@@ -18,11 +18,7 @@ interface Props {
 }
 
 const ExpenseForm = ({ onSubmit }: Props) => {
-    const {
-        register,
-        handleSubmit,
-        reset,
-        formState: { errors },
+    const { register, handleSubmit, reset, formState: { errors },
     } = useForm<ExpenseFormData>({ resolver: zodResolver(schema) });
 
     return (
